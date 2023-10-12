@@ -5,7 +5,7 @@ function Todo({todoData,isFinished,changeFinished,onDelete,onEdit}){
     const [isEditting, setIsEditting] = useState(false);
     const [editText,setEditText] = useState(todoData);
     return (
-        <div>
+        
             
             <div>
                 <input type="checkbox" checked={finished} onChange={(e) => {
@@ -20,13 +20,11 @@ function Todo({todoData,isFinished,changeFinished,onDelete,onEdit}){
                 }}>
                     {(!isEditting) ? 'Edit': 'Save'}
                 </button>
-                {todoData}
-                <button onClick={onEdit}> Edit</button>
                 <button onClick={onDelete}> Delete</button>
 
             </div>
             
-        </div>
+       
     )
 }
 
